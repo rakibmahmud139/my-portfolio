@@ -9,12 +9,9 @@ const SkillSchema = new Schema<TSkill>({
   proficiencyLevel: {
     type: String,
     enum: ProficiencyLevel,
-    required: [true, 'skill name is required'],
+    required: [true, 'level name is required'],
   },
-  category: {
-    type: String,
-    required: [true, 'category date is required'],
-  },
+  bgColor: { type: String },
   yearsOfExperience: {
     type: Number,
     required: [true, 'experience is required'],

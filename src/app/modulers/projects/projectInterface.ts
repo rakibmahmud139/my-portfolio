@@ -7,6 +7,6 @@ export type TProject = {
   endDate: string;
   projectImage: string;
   repositoryURL: string;
+  backEndGitHubLink: string;
   liveLink: string;
-  role?: string;
 };

@@ -14,6 +14,10 @@ const ProjectSchema = new Schema<TProject>({
     type: String,
     required: [true, 'live link is required'],
   },
+  backEndGitHubLink: {
+    type: String,
+    required: [true, 'Back end gitHub link is required'],
+  },
   projectImage: {
     type: String,
     required: [true, 'project image is required'],
@@ -29,10 +33,6 @@ const ProjectSchema = new Schema<TProject>({
   endDate: {
     type: String,
     required: [true, 'endDate is required'],
-  },
-  role: {
-    type: String,
-    required: [false],
   },
   usedTechnologiesBackend: {
     type: [String],

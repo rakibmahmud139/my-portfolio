@@ -7,7 +7,7 @@ export enum ProficiencyLevel {
 export type TSkill = {
   skillName: string;
   proficiencyLevel: ProficiencyLevel;
+  bgColor?: string;
   yearsOfExperience: number;
-  category: string;
   image: string;
 };

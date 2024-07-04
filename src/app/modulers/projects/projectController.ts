@@ -23,7 +23,20 @@ const getAllProject = catchAsync(async (req, res) => {
   });
 });
 
+const getSingleProject = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const result = await ProjectServices.getSingleProject(id);
+
+  return res.status(201).json({
+    success: true,
+    statusCode: 201,
+    message: 'Single project retrieved successfully',
+    data: result,
+  });
+});
+
 export const ProjectControllers = {
   createProject,
   getAllProject,
+  getSingleProject,
 };

@@ -11,7 +11,13 @@ const getAllProject = async () => {
   return result;
 };
 
+const getSingleProject = async (id: string) => {
+  const result = await Project.findById(id);
+  return result;
+};
+
 export const ProjectServices = {
   createProject,
   getAllProject,
+  getSingleProject,
 };
