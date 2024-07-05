@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import { ProficiencyLevel, TSkill } from './skillInterface';
+import { TSkill } from './skillInterface';
 
 const SkillSchema = new Schema<TSkill>({
   skillName: {
@@ -8,7 +8,6 @@ const SkillSchema = new Schema<TSkill>({
   },
   proficiencyLevel: {
     type: String,
-    enum: ProficiencyLevel,
     required: [true, 'level name is required'],
   },
   bgColor: { type: String },

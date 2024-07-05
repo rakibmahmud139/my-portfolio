@@ -1,6 +1,6 @@
 export type TProject = {
-  projectTitle: String;
-  description: String;
+  projectTitle: string;
+  description: string;
   usedTechnologiesFrontend: string[];
   usedTechnologiesBackend: string[];
   startDate: string;
