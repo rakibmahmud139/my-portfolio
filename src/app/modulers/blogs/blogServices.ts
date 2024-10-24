@@ -11,7 +11,13 @@ const getAllFromDB = async () => {
   return result;
 };
 
+const getSingleBlog = async (id: string) => {
+  const result = await Blog.findById(id);
+  return result;
+};
+
 export const BlogServices = {
   getAllFromDB,
   createIntoDB,
+  getSingleBlog,
 };

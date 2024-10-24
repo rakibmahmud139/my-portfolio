@@ -23,7 +23,20 @@ const getAllFromDB = catchAsync(async (req, res) => {
   });
 });
 
+const getSingleBlog = catchAsync(async (req, res) => {
+  const { id } = req.params;
+  const result = await BlogServices.getSingleBlog(id);
+
+  return res.status(201).json({
+    success: true,
+    statusCode: 201,
+    message: 'Single blog retrieved successfully',
+    data: result,
+  });
+});
+
 export const BlogControllers = {
   createIntoDB,
   getAllFromDB,
+  getSingleBlog,
 };
